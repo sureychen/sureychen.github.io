@@ -127,7 +127,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World">
 <meta property="og:url" content="http://yoursite.com/2018/09/12/hello-world/index.html">
-<meta property="og:site_name" content="Surey&#39;s World">
+<meta property="og:site_name" content="Think And Do It">
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-09-12T13:02:46.203Z">
@@ -143,7 +143,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -169,7 +169,7 @@
 
 
 
-  <title>Hello World | Surey's World</title>
+  <title>Hello World | Think And Do It</title>
   
 
 
@@ -199,7 +199,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Surey's World</span>
+        <span class="site-title">Think And Do It</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -295,7 +295,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Surey's World">
+      <meta itemprop="name" content="Think And Do It">
     </span>
 
     
@@ -321,7 +321,19 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-12T21:02:46+08:00">
+                2018-09-12
+              </time>
             
           </span>
 
@@ -371,6 +383,30 @@
 
     
 
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>���ԭ��������������֧�ֽ������Ҽ���������</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="SureyChen 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
@@ -486,21 +522,21 @@
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="2501363272@qq.com" target="_blank" title="E-Mail">
+                    <a href="https://me.csdn.net/cxrlalala" target="_blank" title="CSDN">
                       
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://weibo.com/3540361244" target="_blank" title="Sina">
-                      
-                        <i class="fa fa-fw fa-globe"></i>Sina</a>
+                        <i class="fa fa-fw fa-fire"></i>CSDN</a>
                   </span>
                 
                   <span class="links-of-author-item">
                     <a href="https://www.zhihu.com/people/SureyChen" target="_blank" title="Zhihu">
                       
-                        <i class="fa fa-fw fa-globe"></i>Zhihu</a>
+                        <i class="fa fa-fw fa-leaf"></i>Zhihu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/u/3540361244" target="_blank" title="Sina">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Sina</a>
                   </span>
                 
             </div>
@@ -557,15 +593,9 @@
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
@@ -585,6 +615,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -615,6 +647,9 @@
 
 
 
+
+  
+  
 
 
 
@@ -650,6 +685,16 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
   
 
 
